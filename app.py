@@ -14,5 +14,12 @@ class Users(db.Model):
     first_name = db.Column(db.String(30), nullable=False)
     last_name = db.Column(db.String(30), nullable=False)
 
+class Person(db.Model):
+    id = db.Column(db.Integer, primary_key=True )
+    username = db.Column(db.String(30), unique = True, nullable = False)
+    alive = db.Column(db.Boolean, default=True)
+    date = db.Column(db.DateTime)
+    height = db.Column(db.Float)
+
 if __name__=='__main__':
     app.run(debug==True, host='0.0.0.0')

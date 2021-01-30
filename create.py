@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from app import db, Users
+from app import db, Users, Person
 
 db.drop_all()
 db.create_all()
